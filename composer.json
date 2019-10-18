@@ -3,6 +3,7 @@
   "description": "Library for sorting sequential and associative arrays of integers and strings",
   "keywords": ["sort", "arrays", "string", "integer"],
   "type": "library",
+  "prefer-stable": true,
   "license": "MIT",
   "authors": [
     {
