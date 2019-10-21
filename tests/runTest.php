@@ -4,9 +4,9 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Alebediev\Sorter\Sorter;
-use Alebediev\Sorter\ArraysOfIntegersAndStringsAscendingSorter as AscendingSorter;
-use Alebediev\Sorter\ArraysOfIntegersAndStringsDescendingSorter as DescendingSorter;
-use Alebediev\Sorter\NullSorter;
+use Alebediev\Sorter\Strategy\ScalarType\DescendingSorter;
+use Alebediev\Sorter\Strategy\ScalarType\AscendingSorter;
+use Alebediev\Sorter\Strategy\NullSorter;
 
 $testArrayOfIntegers = [7,4,30,1];
 $testArrayOfStrings = ['Son','Eldest daughter','Younger daughter','Father'];
