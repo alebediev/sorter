@@ -1,4 +1,4 @@
-alebediev/serializer
+alebediev/sorter
 ===============
 
 This library helps sorting sequential and associative arrays of integers and strings. 
