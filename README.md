@@ -20,9 +20,9 @@ Usage
 ...
 
 use Alebediev\Sorter\Sorter;
-use Alebediev\Sorter\ArraysOfIntegersAndStringsAscendingSorter as AscendingSorter;
-use Alebediev\Sorter\ArraysOfIntegersAndStringsDescendingSorter as DescendingSorter;
-use Alebediev\Sorter\NullSorter;
+use Alebediev\Sorter\Strategy\ScalarType\DescendingSorter;
+use Alebediev\Sorter\Strategy\ScalarType\AscendingSorter;
+use Alebediev\Sorter\Strategy\NullSorter;
 
 ...
 
@@ -35,6 +35,9 @@ $ascSortedArray = $ascSorter->sort($sortableArray);
 
 // NullSorter
 $array = $nullSorter->sort($sortableArray); 
+
+// for change sorting strategy
+$someTestArray = $descSorter->changeStrategy(new NullSorter())->sort($sortableArray);
 
 ```
 
