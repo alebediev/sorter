@@ -2,13 +2,14 @@
 
 namespace Alebediev\Sorter\Strategy\ScalarType;
 
+use Alebediev\Sorter\AbstractArrayTypeQualifier;
 use Alebediev\Sorter\SorterInterface;
 
-class AscendingSorter implements SorterInterface
+class AscendingSorter extends AbstractArrayTypeQualifier implements SorterInterface
 {
-    public function sort(array $sortArray, ?string $arrayType): array
+    public function sort(array $sortArray): array
     {
-        isset($arrayType) ? \asort($sortArray) : \sort($sortArray);
+        $this->isAssocArray($sortArray) ? \asort($sortArray) : \sort($sortArray);
 
         return $sortArray;
     }

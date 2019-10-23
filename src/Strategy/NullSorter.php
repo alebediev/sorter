@@ -6,7 +6,7 @@ use Alebediev\Sorter\SorterInterface;
 
 class NullSorter implements SorterInterface
 {
-    public function sort(array $sortArray, ?string $arrayType): array
+    public function sort(array $sortArray): array
     {
         // do nothing
         return $sortArray;
